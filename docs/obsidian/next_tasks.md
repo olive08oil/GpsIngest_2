@@ -25,7 +25,7 @@
 
 1. GitHub remote `https://github.com/olive08oil/GpsIngest_2` への初回pushは完了済み。
 2. 今後の作業はコミット単位で保存し、必要に応じてGitHubへpushする。
-3. GitHub上で生成物やzipが入っていないか確認する。
+3. `git status --short --ignored` で生成物やzipが除外されているか確認する。
 
 ### P3: 旧 `GPSIngest` の扱いを決める
 
@@ -54,10 +54,11 @@ docs/obsidian の引き継ぎメモを読んだうえで、GPSIngest_2.sln の�
 
 - `GPSIngest_2` はGit初期化済み。
 - `.gitignore` で `.vs/`, `bin/`, `obj/`, `publish/`, `cdk.out/`, zip, `*.user` を除外している。
+- GitHub remoteは `origin https://github.com/olive08oil/GpsIngest_2.git`。
 - `GPSIngest_1` は `GPSIngest_1_backup_20260524.zip` に退避済みで、元フォルダは削除済み。
 - 直近の中断処理時点で、上記バックアップzipは存在確認済み。
 - 旧 `GPSIngest` はまだ存在するが、現行作業対象は `GPSIngest_2` とする。
-- `rg --files` では `bin/`, `obj/`, `publish/`, `Infra/_1.git`, zipが混ざるため、検索時は除外条件を付ける。
+- `rg --files` では `bin/`, `obj/`, `publish/`, zipが混ざるため、検索時は除外条件を付ける。
 - 例: `rg --files -g '!bin/**' -g '!obj/**' -g '!publish/**' -g '!.vs/**'`
 - `GpsIngestClinetForm` は誤字に見えるが既存プロジェクト名なので、未確認のままリネームしない。
 - AWS CDKの `RemovalPolicy`, API Key, Secrets ARN, Lambda asset path は実環境に影響するため慎重に扱う。

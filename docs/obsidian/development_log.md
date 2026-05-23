@@ -49,7 +49,7 @@
   - `GpsIngestClinetForm`
   - `SingularForwarderFunction`
   - `RemoteDdbProxyFunction`
-- `GPSIngest_2` ルートには `.git` が存在しない。
+- `GPSIngest_2` ルートには当初 `.git` が存在しなかったが、GitHubアップロード作業でGit初期化済み。
 - `GPSIngest_1` はほぼ空の初期Class Libraryで、現行作業には不要と判断。
 - `GPSIngest_1` のバックアップzipは存在し、元フォルダは削除済み。
 - 旧 `GPSIngest` は `GPSIngest_2` の前段階に近い構成。
@@ -71,7 +71,7 @@
 - 固定APIキー、Secrets Manager ARN、`RemovalPolicy.DESTROY` の運用妥当性は未確認。
 - `RemoteDdbProxyFunction/Function.cs` の文字化けコメントの修正要否は未確認。
 - 旧 `GPSIngest` をアーカイブ/削除するかは未決定。
-- GitHubへの初回push結果確認。
+- 今後の変更ごとのコミット/push運用。
 
 ### Gitバックアップ
 
@@ -80,7 +80,8 @@
 - 生成物を除外する `.gitignore` を追加済み。
 - `Infra_legacy_git_metadata_20260524.zip` は `.gitignore` によりGit管理対象外。
 - 初回push完了。`main` は `origin/main` を追跡中。
+- `0677813` (`docs: record github backup status`) までGitHubへpush済み。
 
 ## 過去履歴
 
-- 未確認。`GPSIngest_2` ルートがGitリポジトリではないため、コミット履歴からの確認はできていない。
+- Git初期化前の履歴は未確認。GitHubアップロード後の履歴は `git log` で確認可能。

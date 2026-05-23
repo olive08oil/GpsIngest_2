@@ -4,10 +4,9 @@
 
 ## 現在の作業内容
 
-- 中断処理を実行中。
-- Codex作業引き継ぎ用のObsidianメモを、今回の作業結果が次回すぐ分かる状態へ更新した。
+- 中断処理を実行し、Codex作業引き継ぎ用のObsidianメモを現在の作業結果が次回すぐ分かる状態へ更新している。
 - 現行の作業対象は `C:\Users\olive\SynologyDrive\code\Visual Studio 2022\Projects\GPSIngest_2`。
-- コード変更は行っていない。今回変更したのは `docs/obsidian/` 配下の引き継ぎメモのみ。
+- GitHubバックアップは設定済み。`main` ブランチは `origin/main` を追跡している。
 - 2026-05-24 01時台に再度中断処理を実行し、Git未管理状態とバックアップzipの存在を再確認した。
 
 ## 今回変更したファイル
@@ -28,6 +27,7 @@
 - GitHubへの初回pushは成功。
 - GitHub URL: `https://github.com/olive08oil/GpsIngest_2`
 - 初回コミット: `5af4b0f` (`chore: initial project import`)
+- GitHub状態記録コミット: `0677813` (`docs: record github backup status`)
 
 ## 今回解決した問題
 
@@ -54,7 +54,7 @@
 
 - `GPSIngest_2.sln` の全体ビルドは失敗扱い。原因は未特定。
 - `GPSIngest_2` はGit初期化済みで、GitHubへの初回pushは完了。
-- `GPSIngest_2` には `bin/`, `obj/`, `publish/`, zipファイル、`Infra/_1.git` などが混在している。
+- `GPSIngest_2` には `bin/`, `obj/`, `publish/`, zipファイルなどの生成物/バックアップが残っているが、`.gitignore` でGit管理対象外にしている。
 - `GPSIngest` 配下に空または重複に見える `.cs` ファイルがある。
   - `GPSIngest/NormalizedTelemetry.cs`
   - `GPSIngest/NmeaParser.cs`
@@ -81,6 +81,7 @@
 - まず `docs/obsidian/current_status.md` を読む。
 - コード変更前に `GPSIngest_2.sln` のビルド結果を確認する。
 - `GPSIngest_2` ルートはGit初期化済み。生成物を誤って追加しないよう `.gitignore` を確認する。
+- 作業後は `git status --short` を確認し、必要に応じてコミットしてGitHubへpushする。
 - 旧 `GPSIngest_1` は削除済み。必要なら `GPSIngest_1_backup_20260524.zip` を参照する。
 - 旧 `GPSIngest` はまだ存在するが、現行作業対象は `GPSIngest_2` とする。
 - `GpsIngestClinetForm` は誤字に見えるが既存プロジェクト名なので、未確認のままリネームしない。
