@@ -21,11 +21,11 @@
 2. `GPSIngest.csproj` の暗黙Compile対象に入っているファイルを確認する。
 3. 不要ファイルの削除またはプロジェクト除外は、ビルド結果と根拠を確認してから実施する。
 
-### P2: GitHubバックアップを完了する
+### P2: GitHubバックアップ運用を継続する
 
-1. GitHub remote `https://github.com/olive08oil/GpsIngest_2` へpushする。
-2. push後、GitHub上で生成物やzipが入っていないか確認する。
-3. 今後の作業はコミット単位で保存する。
+1. GitHub remote `https://github.com/olive08oil/GpsIngest_2` への初回pushは完了済み。
+2. 今後の作業はコミット単位で保存し、必要に応じてGitHubへpushする。
+3. GitHub上で生成物やzipが入っていないか確認する。
 
 ### P3: 旧 `GPSIngest` の扱いを決める
 

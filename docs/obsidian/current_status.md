@@ -25,7 +25,9 @@
 - GitHub remote予定先: `https://github.com/olive08oil/GpsIngest_2`
 - `.gitignore` を追加し、`.vs/`, `bin/`, `obj/`, `publish/`, `cdk.out/`, zip, `*.user` を除外している。
 - `Infra/.git` と `Infra/_1.git` は `Infra_legacy_git_metadata_20260524.zip` に退避後、GitHubへ通常ソースとして上げるため削除した。
-- GitHubへの初回push作業中。
+- GitHubへの初回pushは成功。
+- GitHub URL: `https://github.com/olive08oil/GpsIngest_2`
+- 初回コミット: `5af4b0f` (`chore: initial project import`)
 
 ## 今回解決した問題
 
@@ -51,7 +53,7 @@
 ## まだ残っている問題
 
 - `GPSIngest_2.sln` の全体ビルドは失敗扱い。原因は未特定。
-- `GPSIngest_2` はGit初期化済み。GitHubへの初回push結果確認が未完了。
+- `GPSIngest_2` はGit初期化済みで、GitHubへの初回pushは完了。
 - `GPSIngest_2` には `bin/`, `obj/`, `publish/`, zipファイル、`Infra/_1.git` などが混在している。
 - `GPSIngest` 配下に空または重複に見える `.cs` ファイルがある。
   - `GPSIngest/NormalizedTelemetry.cs`
@@ -72,7 +74,7 @@
 
 1. `GPSIngest_2.sln` のRestore/ビルド失敗原因を調査する。
 2. ビルド結果をもとに、`GPSIngest` 配下の重複/空ファイルを整理する。
-3. GitHubへの初回push結果を確認する。
+3. 次回以降の変更はGitコミットしてGitHubへpushする。
 
 ## 次回作業前に確認すべき注意点
 

@@ -23,6 +23,7 @@
 - `Infra/src/Infra/Infra.csproj` 単体ビルドを実行し、成功を確認。
 - `Infra/.git` と `Infra/_1.git` を `Infra_legacy_git_metadata_20260524.zip` に退避して削除し、`Infra` を通常ソースとしてGit管理できる状態にした。
 - `GPSIngest_2.sln` 全体ビルドを実行。Restoreターゲットで失敗扱いだが、警告0・エラー0で具体原因は未表示。
+- 初回コミット `5af4b0f` (`chore: initial project import`) を作成し、GitHub `https://github.com/olive08oil/GpsIngest_2` の `main` へpush。
 
 ### 今回変更したファイル
 
@@ -78,7 +79,7 @@
 - GitHub remote予定先: `https://github.com/olive08oil/GpsIngest_2`
 - 生成物を除外する `.gitignore` を追加済み。
 - `Infra_legacy_git_metadata_20260524.zip` は `.gitignore` によりGit管理対象外。
-- GitHubへpush予定。
+- 初回push完了。`main` は `origin/main` を追跡中。
 
 ## 過去履歴
 
