@@ -1,10 +1,16 @@
 # Next Tasks
 
-更新日: 2026-05-24
+更新日: 2026-06-25
 
 ## 優先順位つきの次タスク
 
-### P0: `GPSIngest_2` のRestore/ビルド失敗原因を確認する
+### P0: プロジェクトルールに沿って再開・中断処理を運用する
+
+1. 再開処理では、ルート `docs/obsidian/` と作業対象プロジェクトの `docs/obsidian/` を読む。
+2. `プロジェクトルール.md` と `agent_review_queue.md` を確認してから作業する。
+3. Codex以外のAI作業がある場合は、採用前に `agent_review_queue.md` へ記録し、Codexまたはユーザー確認を行う。
+
+### P1: `GPSIngest_2` のRestore/ビルド失敗原因を確認する
 
 1. `dotnet build GPSIngest_2.sln -v:normal` はRestoreターゲットで失敗扱いになるが、警告0・エラー0で具体原因が表示されない。
 2. 次回は `dotnet restore GPSIngest_2.sln -v:diag` や個別プロジェクトビルドで原因を切り分ける。
@@ -15,19 +21,19 @@
    - Lambda/WinForms/CDKの参照不整合
 4. ビルド確認後、結果を `development_log.md` に追記する。
 
-### P1: 重複・残骸ファイルを整理する
+### P2: 重複・残骸ファイルを整理する
 
 1. `GPSIngest` 直下と `GPSIngest/Models` / `GPSIngest/Parsers` の重複ファイルを確認する。
 2. `GPSIngest.csproj` の暗黙Compile対象に入っているファイルを確認する。
 3. 不要ファイルの削除またはプロジェクト除外は、ビルド結果と根拠を確認してから実施する。
 
-### P2: GitHubバックアップ運用を継続する
+### P3: GitHubバックアップ運用を継続する
 
 1. GitHub remote `https://github.com/olive08oil/GpsIngest_2` への初回pushは完了済み。
 2. 今後の作業はコミット単位で保存し、必要に応じてGitHubへpushする。
 3. `git status --short --ignored` で生成物やzipが除外されているか確認する。
 
-### P3: 旧 `GPSIngest` の扱いを決める
+### P4: 旧 `GPSIngest` の扱いを決める
 
 1. 旧 `GPSIngest` は `GPSIngest_2` の前段階に近いが、現時点では本線ではない。
 2. 旧 `GPSIngest.sln` は `SingularForwarderFunction` の `odoKm` 未定義でビルド失敗する。

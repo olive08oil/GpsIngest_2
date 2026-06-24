@@ -1,5 +1,30 @@
 # Development Log
 
+## 2026-06-25
+
+### 変更内容
+
+- 外部ルールファイル `C:\Users\olive\SynologyDrive\code\Visual Studio 2026\プロジェクトルール_AI併用版.md` を確認。
+- このリポジトリ用に `プロジェクトルール.md` を追加。
+- ルート `docs/obsidian/agent_review_queue.md` を追加。
+- ソリューションに含まれる5プロジェクトへ、プロジェクト単位のObsidian引き継ぎメモを追加。
+  - `GPSIngest/docs/obsidian/`
+  - `GpsIngestClinetForm/docs/obsidian/`
+  - `SingularForwarderFunction/docs/obsidian/`
+  - `RemoteDdbProxyFunction/docs/obsidian/`
+  - `Infra/src/Infra/docs/obsidian/`
+
+### なぜ変更したか
+
+- プロジェクトルールでは、Visual Studioの複数 `.csproj` ソリューションは各プロジェクトフォルダ配下に引き継ぎメモを置く方針のため。
+- Codex以外のAI作業を採用前に確認できるよう、`agent_review_queue.md` を追加するため。
+
+### 未解決の課題
+
+- `GPSIngest_2.sln` 全体ビルド失敗原因は未確認。
+- `Infra/src_1/Infra/Infra.csproj` はソリューション外に存在するため、旧コピーかどうか未確認。
+- 今回はドキュメント整備のみで、ビルド確認は実施していない。
+
 ## 2026-05-24
 
 ### 変更内容

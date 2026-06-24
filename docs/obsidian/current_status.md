@@ -1,10 +1,18 @@
 # Current Status
 
-更新日: 2026-05-24
+更新日: 2026-06-25
+
+## プロジェクトルール反映状況
+
+- `C:\Users\olive\SynologyDrive\code\Visual Studio 2026\プロジェクトルール_AI併用版.md` を確認し、このリポジトリ用のローカルルールとして `プロジェクトルール.md` を追加した。
+- このリポジトリは複数 `.csproj` を含むVisual Studioソリューションのため、ソリューションに含まれる各プロジェクト配下にも `docs/obsidian/` を作成した。
+- 既存のルート `docs/obsidian/` は、ユーザーが明示的に作成場所として指定したため、全体統括メモとして維持する。
+- Codex以外のAI作業を確認するため、ルートおよび各プロジェクト配下に `agent_review_queue.md` を追加した。
+- `Infra/src_1/Infra/Infra.csproj` はファイルとして存在するが、`GPSIngest_2.sln` に含まれていないため、現時点ではプロジェクト単位メモ作成対象外。扱いは未確認。
 
 ## 現在の作業内容
 
-- 中断処理を実行し、Codex作業引き継ぎ用のObsidianメモを現在の作業結果が次回すぐ分かる状態へ更新している。
+- プロジェクトルールの反映状況を確認し、Codex作業引き継ぎ用のObsidianメモをプロジェクト単位でも再開できる状態へ更新している。
 - 現行の作業対象は `C:\Users\olive\SynologyDrive\code\Visual Studio 2022\Projects\GPSIngest_2`。
 - GitHubバックアップは設定済み。`main` ブランチは `origin/main` を追跡している。
 - 2026-05-24 01時台に再度中断処理を実行し、Git未管理状態とバックアップzipの存在を再確認した。
@@ -17,6 +25,9 @@
 - `docs/obsidian/next_tasks.md`
 - `docs/obsidian/design_notes.md`
 - `docs/obsidian/development_log.md`
+- `docs/obsidian/agent_review_queue.md`
+- `プロジェクトルール.md`
+- 各ソリューション内プロジェクトの `docs/obsidian/`
 
 ## Gitバックアップ状況
 
